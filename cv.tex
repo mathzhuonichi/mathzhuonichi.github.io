@@ -1,0 +1,144 @@
+\documentclass[11pt,a4paper]{ctexart}
+
+% Fonts and layout
+\usepackage{tgpagella}
+\usepackage{geometry}
+\geometry{
+    a4paper,
+    left=0.75in,
+    right=0.75in,
+    top=0.65in,
+    bottom=0.65in
+}
+
+% Tables / lists / formatting
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{titlesec}
+
+% Links
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=black,
+    pdfborder={0 0 0}
+}
+
+% Section style
+\titleformat{\section}{\fontfamily{phv}\large\bfseries}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{0.65\baselineskip}{0.45\baselineskip}
+
+% Paragraph/table spacing
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.15em}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.05}
+
+% No page number
+\pagestyle{empty}
+
+% Column types
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+\begin{document}
+
+% =========================
+% Header
+% =========================
+\begin{center}
+    {\fontfamily{phv}\selectfont\Large\bfseries Curriculum Vitae: 池卓倪 (Zhuoni Chi)}
+\end{center}
+\vspace{-0.35em}
+
+\href{mailto:znchi@mit.edu}{znchi@mit.edu} \hfill \href{mailto:znchi@zju.edu.cn}{znchi@zju.edu.cn}\\
++1 (857) 331-9122 \hfill +86 18858185159
+
+\vspace{0.2em}
+
+% =========================
+% Personal Information
+% =========================
+\section{Personal Information}
+\begin{tabularx}{\textwidth}{L{1.4in}Y}
+Birth   & 1999, Chongqing, China \\
+Gender  & Male \\
+Pronouns & he/him/his
+\end{tabularx}
+
+% =========================
+% Education
+% =========================
+\section{Education}
+\begin{tabularx}{\textwidth}{L{1.65in}Y}
+2025--2026 &
+\textbf{Visiting Student}, Massachusetts Institute of Technology \\
+& Cambridge, MA, United States \\[0.15em]
+
+2022--(2027 expected) &
+\textbf{Ph.D. in Mathematics}, Zhejiang University \\
+& Supervisor: Prof. Yifeng Liu \\
+& Hangzhou, China \\[0.15em]
+
+2018--2022 &
+\textbf{B.S. in Mathematics}, Peking University \\
+& Beijing, China \\
+\end{tabularx}
+
+% =========================
+% Research Interests
+% =========================
+\section{Research Interests}
+My research interests include algebraic number theory, automorphic representation theory, and their applications to the classical Langlands program. I have worked on arithmetic theta lifting for unitary groups, at the intersection of number theory, algebraic geometry, and representation theory.
+
+I am also interested in formalizing mathematical olympiad problems and undergraduate-level mathematics in Lean4. I formalized about 50 AMC to USAMO level MO problems in Project Numina.
+
+% =========================
+% Research Work
+% =========================
+\section{Research Work}
+\begin{enumerate}[label=(\arabic*), leftmargin=1.8em, itemsep=0.2em, topsep=0.15em]
+    \item \textit{Spherical representations of unitary groups at ramified places and the arithmetic inner product formula} (preprint, available at \url{https://arxiv.org/abs/2602.02492})
+\end{enumerate}
+
+% =========================
+% Academic Service
+% =========================
+\section{Academic Service}
+\begin{itemize}[leftmargin=1.4em, itemsep=0.2em, topsep=0.15em]
+    \item \textit{Teaching Assistant}: 2022 Homological Algebra, 2023 Algebra III at Zhejiang University; 2024 Lean4 Summer Camp at Peking University.
+    \item \textit{Organizer} of five seminars on \'etale cohomology, arithmetic inner product formula, \(\mathrm{GL}_2\) local Langlands, \(p\)-adic Hodge theory, and \(p\)-adic geometry at Zhejiang University.
+\end{itemize}
+
+% =========================
+% Honors & Awards
+% =========================
+\section{Honors \& Awards}
+\begin{tabularx}{\textwidth}{L{1.1in}Y}
+2017 &
+\textbf{Gold Medal, 33rd Chinese Mathematical Olympiad (CMO), Rank 59/356} \\
+& \textbf{Member of the National Training Team}, Hangzhou, China \\[0.15em]
+
+2018 &
+\textbf{Undergraduate Entry Scholarship}, Peking University, Beijing, China \\[0.15em]
+
+2021 &
+\textbf{Guoqin Scholarship}, Peking University, Beijing, China \\
+\end{tabularx}
+
+% =========================
+% Skills
+% =========================
+\section{Skills}
+\begin{tabularx}{\textwidth}{L{1.2in}Y}
+Programming &
+Python (no substantial software project experience yet);\\ &Lean4 (formal proof assistant; formalization of undergraduate mathematics and olympiad problems). \\[0.15em]
+
+
+Languages &
+Chinese (native), English (working proficiency). \\
+\end{tabularx}
+
+\end{document}

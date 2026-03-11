@@ -1,0 +1,383 @@
+/* ==============================
+   Zhuoni's Math Homepage Styles
+   ============================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-primary:    #1a4a7a;
+  --color-secondary:  #2d7dd2;
+  --color-accent:     #e8f0fe;
+  --color-bg:         #ffffff;
+  --color-text:       #222222;
+  --color-muted:      #555555;
+  --color-border:     #d0d7de;
+  --font-main:        'Georgia', 'Times New Roman', serif;
+  --font-mono:        'Courier New', Courier, monospace;
+  --max-width:        900px;
+  --nav-height:       56px;
+}
+
+/* ── Base ── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+a {
+  color: var(--color-secondary);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* ── Layout ── */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ── Navigation ── */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--color-primary);
+  height: var(--nav-height);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+nav .container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 0;
+}
+
+nav .nav-brand {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 0.03em;
+  margin-right: auto;
+  white-space: nowrap;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 0;
+}
+
+nav ul li a {
+  display: block;
+  padding: 0 1rem;
+  line-height: var(--nav-height);
+  color: rgba(255,255,255,0.88);
+  font-size: 0.92rem;
+  letter-spacing: 0.03em;
+  transition: color 0.15s, background 0.15s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #fff;
+  background: rgba(255,255,255,0.12);
+  text-decoration: none;
+}
+
+/* ── Hero / Header ── */
+#hero {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #24558e 60%, var(--color-secondary) 100%);
+  color: #fff;
+  padding: 4rem 0 3.5rem;
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.hero-photo {
+  flex-shrink: 0;
+}
+
+.hero-photo img,
+.photo-placeholder {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid rgba(255,255,255,0.5);
+  object-fit: cover;
+  display: block;
+}
+
+.hero-photo img {
+  object-position: 40% 30%;
+}
+
+.photo-placeholder {
+  background: rgba(255,255,255,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  color: rgba(255,255,255,0.7);
+}
+
+.hero-text h1 {
+  font-size: 2.2rem;
+  font-weight: normal;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.3rem;
+}
+
+.hero-text .title {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.82);
+  margin-bottom: 0.2rem;
+}
+
+.hero-text .affiliation {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 1rem;
+}
+
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.hero-links a {
+  display: inline-block;
+  padding: 0.3rem 0.9rem;
+  border: 1px solid rgba(255,255,255,0.55);
+  border-radius: 20px;
+  color: rgba(255,255,255,0.92);
+  font-size: 0.88rem;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.hero-links a:hover {
+  background: rgba(255,255,255,0.18);
+  border-color: rgba(255,255,255,0.9);
+  text-decoration: none;
+}
+
+/* ── Sections ── */
+section {
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+section:last-of-type {
+  border-bottom: none;
+}
+
+section h2 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: var(--color-primary);
+  margin-bottom: 1.4rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-secondary);
+  display: inline-block;
+}
+
+/* ── About ── */
+#about p {
+  margin-bottom: 1rem;
+  max-width: 72ch;
+}
+
+/* ── Research ── */
+#research .research-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.2rem;
+  margin-bottom: 1.4rem;
+}
+
+.research-card {
+  background: var(--color-accent);
+  border: 1px solid #c5d5f0;
+  border-radius: 8px;
+  padding: 1.1rem 1.3rem;
+}
+
+.research-card h3 {
+  font-size: 1rem;
+  color: var(--color-primary);
+  margin-bottom: 0.4rem;
+}
+
+.research-card p {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+/* ── Publications ── */
+#publications .pub-list {
+  list-style: none;
+}
+
+.pub-item {
+  padding: 1rem 0;
+  border-bottom: 1px dotted var(--color-border);
+}
+
+.pub-item:last-child {
+  border-bottom: none;
+}
+
+.pub-item .pub-title {
+  font-weight: bold;
+  color: var(--color-primary);
+  margin-bottom: 0.25rem;
+}
+
+.pub-item .pub-authors {
+  font-size: 0.9rem;
+  color: var(--color-text);
+  margin-bottom: 0.2rem;
+}
+
+.pub-item .pub-venue {
+  font-size: 0.88rem;
+  color: var(--color-muted);
+  font-style: italic;
+}
+
+.pub-item .pub-links {
+  margin-top: 0.3rem;
+  display: flex;
+  gap: 0.7rem;
+  font-size: 0.85rem;
+}
+
+.pub-badge {
+  display: inline-block;
+  background: var(--color-secondary);
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 0.1rem 0.55rem;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+}
+
+/* ── Teaching ── */
+#teaching .teaching-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.2rem;
+}
+
+.course-card {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1.1rem 1.3rem;
+}
+
+.course-card h3 {
+  font-size: 1rem;
+  color: var(--color-primary);
+  margin-bottom: 0.3rem;
+}
+
+.course-card .course-code {
+  font-size: 0.82rem;
+  font-family: var(--font-mono);
+  color: var(--color-secondary);
+  margin-bottom: 0.3rem;
+}
+
+.course-card p {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+/* ── Contact ── */
+#contact .contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.contact-info dt {
+  font-weight: bold;
+  color: var(--color-primary);
+  margin-top: 0.7rem;
+  font-size: 0.92rem;
+}
+
+.contact-info dd {
+  color: var(--color-text);
+  font-size: 0.95rem;
+  margin-left: 0;
+  margin-bottom: 0.2rem;
+}
+
+.contact-note {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  margin-top: 1.2rem;
+  max-width: 60ch;
+}
+
+/* ── Footer ── */
+footer {
+  background: var(--color-primary);
+  color: rgba(255,255,255,0.7);
+  text-align: center;
+  padding: 1.2rem 1rem;
+  font-size: 0.85rem;
+}
+
+footer a {
+  color: rgba(255,255,255,0.85);
+}
+
+/* ── Utilities ── */
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-links {
+    justify-content: center;
+  }
+  #contact .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  nav .nav-brand {
+    font-size: 0.95rem;
+  }
+  nav ul li a {
+    padding: 0 0.6rem;
+    font-size: 0.82rem;
+  }
+}
